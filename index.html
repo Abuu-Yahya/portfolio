@@ -1,1054 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bin Abdinoor | Web Developer</title>
-    <meta
-      name="description"
-      content="A modern, professional, futuristic and creative personal portfolio."
-    />
-    <meta
-      name="keywords"
-      content="portfolio, web developer, frontend developer, JavaScript, HTML, CSS, projects"
-    />
-    <meta name="author" content="Bin Abdinoor" />
-    <meta property="og:title" content="Bin Abdinoor | Web Developer" />
-    <meta
-      property="og:description"
-      content="Explore my skills, projects, resume and professional journey."
-    />
-    <meta property="og:type" content="website" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="page-loader" id="pageLoader" aria-hidden="true">
-      <div class="loader-content">
-        <div class="loader-logo">✦</div>
-        <div class="loader-line"><span></span></div>
-        <p>Loading portfolio...</p>
-      </div>
-    </div>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="background-effects" aria-hidden="true">
-      <div class="background-grid"></div>
-      <div class="glow-orb glow-orb-one"></div>
-      <div class="glow-orb glow-orb-two"></div>
-      <div class="glow-orb glow-orb-three"></div>
-    </div>
-    <header class="site-header" id="siteHeader">
-      <div class="container header-container">
-        <a class="site-logo" href="#home" aria-label="Go to homepage">
-          <span class="logo-symbol"><img src="images/profile.jpg" alt="Bin" /></span>
-          <span class="logo-text">Bin Abdinoor</span>
-        </a>
-        <nav class="desktop-navigation" aria-label="Primary navigation">
-          <a class="nav-link active" href="#home">Home</a>
-          <a class="nav-link" href="#about">About Me</a>
-          <a class="nav-link" href="#skills">Skills</a>
-          <a class="nav-link" href="#resume">Resume</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#social">Social</a>
-        </nav>
-        <div class="header-actions">
-          <button
-            class="icon-button theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Toggle dark and light theme"
-            title="Toggle theme"
-          >
-            <span class="theme-icon" aria-hidden="true">☾</span>
-          </button>
-          <a class="header-contact-button" href="#contact">
-            <span>Let's Talk</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-          <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="mobileNavigation"
-          >
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-      <nav
-        class="mobile-navigation"
-        id="mobileNavigation"
-        aria-label="Mobile navigation"
-        aria-hidden="true"
-      >
-        <a class="mobile-nav-link active" href="#home"><span>01</span>Home</a>
-        <a class="mobile-nav-link" href="#about"><span>02</span>About Me</a>
-        <a class="mobile-nav-link" href="#skills"><span>03</span>Skills</a>
-        <a class="mobile-nav-link" href="#resume"><span>04</span>Resume</a>
-        <a class="mobile-nav-link" href="#projects"><span>05</span>Projects</a>
-        <a class="mobile-nav-link" href="#social"
-          ><span>06</span>Social Media</a
-        >
-        <a class="mobile-nav-link mobile-contact-link" href="#contact"
-          ><span>07</span>Contact</a
-        >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Abdinoor Muhammed (Bin) — Web Developer</title>
+  <meta name="description" content="Bin is a self-taught web developer from Watamu, Kenya, building school software, web apps and business websites." />
+  <meta property="og:title" content="Ali Abdinoor Muhammed (Bin) — Web Developer" />
+  <meta property="og:description" content="Self-taught developer building school software, web apps and business websites." />
+  <meta property="og:image" content="images/profile.jpg" />
+  <link rel="icon" href="images/profile.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="Bin — home">
+        <img src="images/profile.jpg" alt="" width="36" height="36" />
+        <span>Bin</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#path">Path</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
       </nav>
-    </header>
-    <main id="main-content">
-      <section
-        class="hero-section section"
-        id="home"
-        aria-labelledby="hero-title"
-      >
-        <div class="container hero-container">
-          <div class="hero-content">
-            <div class="availability-badge">
-              <span class="availability-dot"></span>
-              <span>Available for opportunities</span>
-            </div>
-            <p class="hero-small-heading">HELLO, I'M A CREATIVE DEVELOPER</p>
-            <h1 class="hero-title" id="hero-title">
-              Building
-              <span class="gradient-text">digital experiences</span> that make
-              an impact.
-            </h1>
-            <p class="hero-description">
-              I create modern, responsive and user-focused digital experiences
-              by combining clean design, thoughtful development and creative
-              technology.
-            </p>
-            <div class="hero-role">
-              <span class="role-prefix">I specialize in</span>
-              <span class="typing-text" id="typingText" aria-live="polite"
-                >Web Development</span
-              >
-            </div>
-            <div class="hero-actions">
-              <a class="primary-button" href="#projects">
-                <span>View My Work</span>
-                <span class="button-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a class="secondary-button" href="#about">
-                <span>More About Me</span>
-                <span class="button-arrow" aria-hidden="true">↓</span>
-              </a>
-            </div>
-            <div class="hero-socials">
-              <span class="social-label">Follow my journey</span>
-              <div class="social-links-inline">
-                <a href="#social" aria-label="LinkedIn" title="LinkedIn">in</a>
-                <a href="https://github.com/Abuu-Yahya" aria-label="GitHub" title="GitHub">GH</a>
-                <a href="#social" aria-label="Instagram" title="Instagram"
-                  >IG</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-orbit orbit-one"></div>
-            <div class="hero-orbit orbit-two"></div>
-            <div class="hero-orbit orbit-three"></div>
-            <div class="profile-visual-card">
-              <div class="profile-card-glow"></div>
-              <div class="profile-card-top">
-                <span class="card-status"><span></span>ONLINE</span>
-                <span class="card-menu">•••</span>
-              </div>
-              <div class="profile-placeholder">
-                <div class="profile-ring ring-one"></div>
-                <div class="profile-ring ring-two"></div>
-                <div class="profile-ring ring-three"></div>
-                  <span><img src="images/profile.jpg" alt="Bin" /></span>
-                </div>
-              </div>
-              <div class="profile-card-bottom">
-                <div>
-                  <span class="profile-label">CREATIVE</span>
-                  <strong>DEVELOPER</strong>
-                </div>
-                <span class="profile-number">01</span>
-              </div>
-            </div>
-            <div class="floating-code-card">
-              <div class="code-card-header">
-                <span class="code-dot"></span><span class="code-dot"></span
-                ><span class="code-dot"></span>
-              </div>
-              <div class="code-content">
-                <span class="code-line"
-                  ><span class="code-number">01</span
-                  ><span class="code-symbol">&lt;</span
-                  ><span class="code-tag">creative</span
-                  ><span class="code-symbol">&gt;</span></span
-                >
-                <span class="code-line"
-                  ><span class="code-number">02</span
-                  ><span class="code-indent"></span
-                  ><span class="code-property">build</span
-                  ><span class="code-symbol">=</span
-                  ><span class="code-value">"ideas"</span></span
-                >
-                <span class="code-line"
-                  ><span class="code-number">03</span
-                  ><span class="code-indent"></span
-                  ><span class="code-property">impact</span
-                  ><span class="code-symbol">=</span
-                  ><span class="code-value">true</span></span
-                >
-                <span class="code-line"
-                  ><span class="code-number">04</span
-                  ><span class="code-symbol">&lt;/</span
-                  ><span class="code-tag">creative</span
-                  ><span class="code-symbol">&gt;</span></span
-                >
-              </div>
-            </div>
-            <div class="floating-stat-card">
-              <span class="stat-icon">✦</span>
-              <div><strong>Creative</strong><span>Problem Solver</span></div>
-            </div>
-          </div>
-        </div>
-        <a
-          class="scroll-indicator"
-          href="#about"
-          aria-label="Scroll to About Me"
-        >
-          <span class="scroll-line"></span>
-          <span>SCROLL TO EXPLORE</span>
-        </a>
-      </section>
-      <section
-        class="about-section section"
-        id="about"
-        aria-labelledby="about-title"
-      >
-        <div class="container">
-          <div class="section-heading">
-            <div class="section-number">01 / ABOUT</div>
-            <h2 id="about-title">
-              Turning curiosity into
-              <span class="gradient-text">meaningful digital work.</span>
-            </h2>
-            <p>
-              A little more about the person behind the code, ideas and
-              projects.
-            </p>
-          </div>
-          <div class="about-grid">
-            <div class="about-visual">
-              <div class="about-image-frame">
-                <div class="image-frame-decoration decoration-one"></div>
-                <div class="image-frame-decoration decoration-two"></div>
-                <div class="about-image-content">
-                  <div class="about-monogram"><span>✦</span></div>
-                  <span class="about-image-label">CREATIVE MIND</span>
-                </div>
-              </div>
-              <div class="about-experience-card">
-                <span class="experience-number">∞</span>
-                <div>
-                  <strong>Always Learning</strong><span>Always Building</span>
-                </div>
-              </div>
-            </div>
-            <div class="about-content">
-              <p class="large-paragraph">
-                <p class="large-paragraph">I taught myself to code because
-                   I refused to wait for permission to build something.
-                    No bootcamp, no shortcuts — just curiosity, consistency, and a lot of late nights.</p>
-              </p>
-              <p>
-                <p>I'm trilingual, self-driven, and building in public. 
-                  Every line of code I write is proof that where you start doesn't decide where you end up.</p>
-              </p>
-              <p>
-                For over eight years, I've kept a business running behind the scenes — sales, 
-                operations, inventory, problem-solving under pressure. That discipline is exactly what I bring to development: 
-                show up, figure it out, ship it.
-              </p>
-              <div class="about-highlights">
-                <div class="highlight-item">
-                  <span class="highlight-icon">◈</span>
-                  <div>
-                    <strong>Creative Thinking</strong
-                    ><span>Finding simple solutions to complex problems.</span>
-                  </div>
-                </div>
-                <div class="highlight-item">
-                  <span class="highlight-icon">◇</span>
-                  <div>
-                    <strong>Continuous Learning</strong
-                    ><span
-                      >Constantly developing new technical and creative
-                      skills.</span
-                    >
-                  </div>
-                </div>
-                <div class="highlight-item">
-                  <span class="highlight-icon">◎</span>
-                  <div>
-                    <strong>User Focused</strong
-                    ><span
-                      >Building experiences around real people and real
-                      needs.</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <a class="text-link" href="#resume"
-                ><span>Explore my journey</span
-                ><span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="skills-section section section-dark"
-        id="skills"
-        aria-labelledby="skills-title"
-      >
-        <div class="container">
-          <div class="section-heading centered-heading">
-            <div class="section-number">02 / SKILLS</div>
-            <h2 id="skills-title">
-              Tools I use to turn
-              <span class="gradient-text">ideas into reality.</span>
-            </h2>
-            <p>
-              A growing toolkit built through learning, practice and real-world
-              projects.
-            </p>
-          </div>
-          <div class="skills-grid">
-            <article class="skill-card" data-skill="HTML5" data-level="90">
-              <div class="skill-card-top">
-                <span class="skill-icon">HTML</span
-                ><span class="skill-percentage">90%</span>
-              </div>
-              <h3>HTML5</h3>
-              <p>Building semantic and accessible web structures.</p>
-              <div class="skill-progress">
-                <span
-                  class="skill-progress-bar"
-                  style="--skill-level: 90%"
-                ></span>
-              </div>
-            </article>
-            <article class="skill-card" data-skill="CSS3" data-level="85">
-              <div class="skill-card-top">
-                <span class="skill-icon">CSS</span
-                ><span class="skill-percentage">85%</span>
-              </div>
-              <h3>CSS3</h3>
-              <p>Creating responsive, modern and polished interfaces.</p>
-              <div class="skill-progress">
-                <span
-                  class="skill-progress-bar"
-                  style="--skill-level: 85%"
-                ></span>
-              </div>
-            </article>
-            <article class="skill-card" data-skill="JavaScript" data-level="75">
-              <div class="skill-card-top">
-                <span class="skill-icon">JS</span
-                ><span class="skill-percentage">75%</span>
-              </div>
-              <h3>JavaScript</h3>
-              <p>Adding interaction, logic and dynamic experiences.</p>
-              <div class="skill-progress">
-                <span
-                  class="skill-progress-bar"
-                  style="--skill-level: 75%"
-                ></span>
-              </div>
-            </article>
-            <article
-              class="skill-card"
-              data-skill="Responsive Design"
-              data-level="90"
-            >
-              <div class="skill-card-top">
-                <span class="skill-icon">UI</span
-                ><span class="skill-percentage">90%</span>
-              </div>
-              <h3>Responsive Design</h3>
-              <p>Designing interfaces that work across every screen.</p>
-              <div class="skill-progress">
-                <span
-                  class="skill-progress-bar"
-                  style="--skill-level: 90%"
-                ></span>
-              </div>
-            </article>
-            <article class="skill-card" data-skill="Git" data-level="70">
-              <div class="skill-card-top">
-                <span class="skill-icon">GIT</span
-                ><span class="skill-percentage">70%</span>
-              </div>
-              <h3>Git & GitHub</h3>
-              <p>Managing source code and collaborating on projects.</p>
-              <div class="skill-progress">
-                <span
-                  class="skill-progress-bar"
-                  style="--skill-level: 70%"
-                ></span>
-              </div>
-            </article>
-            <article class="skill-card" data-skill="UI UX" data-level="75">
-              <div class="skill-card-top">
-                <span class="skill-icon">UX</span
-                ><span class="skill-percentage">75%</span>
-              </div>
-              <h3>UI / UX</h3>
-              <p>Designing intuitive experiences with users in mind.</p>
-              <div class="skill-progress">
-                <span
-                  class="skill-progress-bar"
-                  style="--skill-level: 75%"
-                ></span>
-              </div>
-            </article>
-          </div>
-          <div class="technology-marquee">
-            <div class="marquee-track">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span
-              ><span>Responsive Design</span><span>Git</span><span>GitHub</span
-              ><span>UI/UX</span><span>Web Development</span> <span>HTML5</span
-              ><span>CSS3</span><span>JavaScript</span
-              ><span>Responsive Design</span><span>Git</span><span>GitHub</span
-              ><span>UI/UX</span><span>Web Development</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="resume-section section"
-        id="resume"
-        aria-labelledby="resume-title"
-      >
-        <div class="container">
-          <div class="section-heading">
-            <div class="section-number">03 / RESUME</div>
-            <h2 id="resume-title">
-              My professional <span class="gradient-text">journey.</span>
-            </h2>
-            <p>
-              Education, experience and the milestones that continue to shape my
-              development.
-            </p>
-          </div>
-          <div class="resume-layout">
-            <div class="resume-timeline">
-              <article class="timeline-item">
-                <div class="timeline-marker">01</div>
-                <div class="timeline-content">
-                  <span class="timeline-period">CURRENT</span>
-                  <h3>Web Development & Technology</h3>
-                  <p>
-                    Developing practical skills in modern web technologies while
-                    creating projects that combine functionality and design.
-                  </p>
-                  <div class="timeline-tags">
-                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                  </div>
-                </div>
-              </article>
-              <article class="timeline-item">
-  <div class="timeline-marker">01</div>
-  <div class="timeline-content">
-    <span class="timeline-period">CURRENT</span>
-    <h3>Teaching Myself Web Development</h3>
-    <p>Learning HTML, CSS, and JavaScript from scratch — building real projects like 
-      this portfolio to put skills into practice.</p>
-    <div class="timeline-tags">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
+      <button class="icon-btn" id="themeToggle" aria-label="Switch to dark theme" type="button">◐</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav" type="button">
+        <span></span><span></span>
+      </button>
     </div>
-  </div>
-</article>
+  </header>
 
-<article class="timeline-item">
-  <div class="timeline-marker">02</div>
-  <div class="timeline-content">
-    <span class="timeline-period">ONGOING</span>
-    <h3>Freelance Data Entry & Virtual Assistant</h3>
-    <p>Delivering remote data entry, transcription, and virtual assistant work on Upwork, 
-      leveraging trilingual skills in Somali, Swahili, and English.</p>
-    <div class="timeline-tags">
-      <span>Remote Work</span>
-      <span>Languages</span>
-      <span>Client Service</span>
-    </div>
-  </div>
-</article>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Hello, I'm Bin — web developer in Watamu, Kenya</p>
+          <h1>I build software for people who <em>run real businesses</em> and real schools.</h1>
+          <p class="lead">I taught myself to code because I refused to wait for permission to build something. No bootcamp, no shortcuts — just curiosity, consistency, and a lot of late nights.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">See my work</a>
+            <a class="btn btn-ghost" href="assets/documents/resume.pdf" download>Download résumé</a>
+          </div>
+          <ul class="hero-meta">
+            <li>Open to freelance projects</li>
+            <li>Somali · Swahili · English</li>
+          </ul>
+        </div>
+        <figure class="portrait">
+          <div class="portrait-frame"><img src="images/profile.jpg" alt="Portrait of Ali Abdinoor Muhammed, known as Bin" width="720" height="720" /></div>
+          <figcaption>Ali Abdinoor Muhammed</figcaption>
+        </figure>
+      </div>
+    </section>
 
-<article class="timeline-item">
-  <div class="timeline-marker">03</div>
-  <div class="timeline-content">
-    <span class="timeline-period">8+ YEARS</span>
-    <h3>Sales, Cashier & Inventory — Alnoor Enterprises</h3>
-    <p>Built a strong foundation in operations, reliability, 
-      and problem-solving under real business pressure.</p>
-    <div class="timeline-tags">
-      <span>Operations</span>
-      <span>Sales</span>
-      <span>Reliability</span>
-    </div>
-  </div>
-</article>
-            </div>
-            <aside class="resume-card">
-              <div class="resume-card-decoration"></div>
-              <span class="resume-card-icon">↓</span>
-              <span class="resume-card-label">WANT THE FULL STORY?</span>
-              <h3>Download my <span class="gradient-text">resume.</span></h3>
-              <p>
-                Get a complete overview of my skills, experience, education and
-                professional journey.
-              </p>
-              <a
-                class="primary-button full-width-button"
-                href="assets/documents/resume.pdf"
-                download="resume.pdf"
-              >
-                <span>Download Resume</span>
-                <span class="button-arrow" aria-hidden="true">↓</span>
-              </a>
-              <span class="resume-file-info">PDF DOCUMENT</span>
-            </aside>
-          </div>
-        </div>
-      </section>
-      <section
-        class="projects-section section section-dark"
-        id="projects"
-        aria-labelledby="projects-title"
-      >
-        <div class="container">
-          <div class="projects-heading-row">
-            <div class="section-heading">
-              <div class="section-number">04 / PROJECTS</div>
-              <h2 id="projects-title">
-                Selected <span class="gradient-text">projects.</span>
-              </h2>
-              <p>
-                A collection of ideas, experiments and digital experiences built
-                with purpose.
-              </p>
-            </div>
-            <div class="project-count">
-              <strong>03</strong><span>Featured<br />Projects</span>
-            </div>
-          </div>
-          <div
-            class="project-filters"
-            role="group"
-            aria-label="Filter projects"
-          >
-            <button
-              class="filter-button active"
-              type="button"
-              data-filter="all"
-            >
-              All
-            </button>
-            <button class="filter-button" type="button" data-filter="web">
-              Web
-            </button>
-            <button class="filter-button" type="button" data-filter="app">
-              Apps
-            </button>
-            <button class="filter-button" type="button" data-filter="design">
-              Design
-            </button>
-          </div>
-          <div class="projects-grid">
-            <article
-              class="project-card featured-project"
-              data-category="web"
-              data-project="project-one"
-            >
-              <div class="project-image">
-                <div class="project-image-background project-background-one">
-                  <div class="project-window">
-                    <div class="window-header">
-                      <span></span><span></span><span></span>
-                    </div>
-                    <div class="window-body">
-                      <div class="window-sidebar"></div>
-                      <div class="window-main">
-                        <div class="window-heading"></div>
-                        <div class="window-cards">
-                          <span></span><span></span><span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-overlay">
-                  <button
-                    class="project-view-button"
-                    type="button"
-                    data-project-open="project-one"
-                    aria-label="View project details"
-                  >
-                    ↗
-                  </button>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta">
-                  <span>01</span><span>WEB DEVELOPMENT</span>
-                </div>
-                <h3>Personal Portfolio Website</h3>
-                <p>A fully responsive personal portfolio built from scratch with HTML, CSS, 
-                  and JavaScript — featuring a working contact form, dark/light themes, 
-                  and interactive project showcases.</p>
-                <div class="project-tags">
-                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                </div>
-                <button
-                  class="project-details-link"
-                  type="button"
-                  data-project-open="project-one"
-                >
-                  <span>View Case Study</span><span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              data-category="app"
-              data-project="project-two"
-            >
-              <div class="project-image">
-                <div class="project-image-background project-background-two">
-                  <div class="phone-mockup">
-                    <div class="phone-speaker"></div>
-                    <div class="phone-screen">
-                      <div class="app-topbar"></div>
-                      <div class="app-hero"></div>
-                      <div class="app-list">
-                        <span></span><span></span><span></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-overlay">
-                  <button
-                    class="project-view-button"
-                    type="button"
-                    data-project-open="project-two"
-                    aria-label="View project details"
-                  >
-                    ↗
-                  </button>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta">
-                  <span>02</span><span>PYTHON / AI</span>
-                </div>
-                <h3>JARVIS Voice Assistant</h3>
-                <p>A JARVIS-style AI voice assistant built in Python, 
-                  featuring wake-word detection, speech-to-text, text-to-speech, 
-                  and real-time AI conversation.</p>
-               <div class="project-tags">
-               <span>Python</span><span>AI</span><span>Voice Tech</span>
-               </div>
-                <button
-                  class="project-details-link"
-                  type="button"
-                  data-project-open="project-two"
-                >
-                  <span>View Case Study</span><span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              data-category="design"
-              data-project="project-three"
-            >
-              <div class="project-image">
-                <div class="project-image-background project-background-three">
-                  <div class="design-preview">
-                    <div class="design-circle"></div>
-                    <div class="design-line"></div>
-                    <div class="design-line short"></div>
-                    <div class="design-button"></div>
-                  </div>
-                </div>
-                <div class="project-overlay">
-                  <button
-                    class="project-view-button"
-                    type="button"
-                    data-project-open="project-three"
-                    aria-label="View project details"
-                  >
-                    ↗
-                  </button>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta">
-                  <span>03</span><span>WEB DEVELOPMENT</span>
-                </div>
-                <h3>Alnoor Enterprises Website</h3>
-               <p>An in-progress business website for Alnoor Enterprises, 
-                a wholesale/distribution company — designed to showcase products,
-                 build trust, and share contact information.</p>
-                <div class="project-tags">
-                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                </div>
-                <button
-                  class="project-details-link"
-                  type="button"
-                  data-project-open="project-three"
-                >
-                  <span>View Case Study</span><span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        class="social-section section"
-        id="social"
-        aria-labelledby="social-title"
-      >
-        <div class="container">
-          <div class="social-layout">
-            <div class="social-introduction">
-              <div class="section-number">05 / SOCIAL</div>
-              <h2 id="social-title">
-                Let's connect <span class="gradient-text">digitally.</span>
-              </h2>
-              <p>
-                Follow my work, learning journey and future projects across my
-                social platforms.
-              </p>
-            </div>
-            <div class="social-platforms">
-              <a
-                class="social-platform-card"
-                href="https://www.upwork.com/freelancers/~01b55e15e6db06e7d1?viewMode=1"
-                data-social="upwork"
-                aria-label="Upwork profile"
-              >
-                <div class="social-platform-icon">uw</div>
-                <div class="social-platform-info">
-                  <strong>Upwork</strong><span>Professional journey</span>
-                </div>
-                <span class="social-platform-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a    
-                class="social-platform-card"
-                href="https://github.com/Abuu-Yahya"
-                data-social="github"
-                aria-label="GitHub profile"
-              >
-                <div class="social-platform-icon">GH</div>
-                <div class="social-platform-info">
-                  <strong>GitHub</strong><span>Code & projects</span>
-                </div>
-                <span class="social-platform-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a
-                class="social-platform-card"
-                href="https://www.tiktok.com/@maogtahay"
-                data-social="tik-tok"
-                aria-label="TikTok profile"
-              >
-                <div class="social-platform-icon">TT</div>
-                <div class="social-platform-info">
-                  <strong>TikTok</strong><span>Creative updates</span>
-                </div>
-                <span class="social-platform-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a
-                class="social-platform-card"
-                href="https://www.facebook.com/sidallybinabdinoor"
-                data-social="facebook"
-                aria-label="Facebook profile"
-              >
-                <div class="social-platform-icon">X</div>
-                <div class="social-platform-info">
-                  <strong>Facebook</strong><span>Thoughts & ideas</span>
-                </div>
-                <span class="social-platform-arrow" aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="contact-section section section-dark"
-        id="contact"
-        aria-labelledby="contact-title"
-      >
-        <div class="container">
-          <div class="contact-container">
-            <div class="contact-introduction">
-              <div class="section-number">06 / CONTACT</div>
-              <h2 id="contact-title">
-                Have an idea? <span class="gradient-text">Let's build it.</span>
-              </h2>
-              <p>
-                Whether you have a project in mind, a question, or simply want
-                to connect, send me a message.
-              </p>
-              <div class="contact-information">
-                <div class="contact-info-item">
-                  <span class="contact-info-icon">@</span>
-                  <div>
-                    <span>EMAIL</span
-                    ><button
-                      class="copy-contact-button"
-                      type="button"
-                      data-copy="binabdinoor@gmail.com"
-                    >
-                      binabdinoor@gmail.com
-                    </button>
-                  </div>
-                </div>
-                <div class="contact-info-item">
-                  <span class="contact-info-icon">☎</span>
-                  <div>
-                    <span>PHONE</span
-                    ><button
-                      class="copy-contact-button"
-                      type="button"
-                      data-copy="+254 743422666"
-                    >
-                      +254 743422666
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <form
-              class="contact-form"
-              id="contactForm"
-              action="https://api.web3forms.com/submit"
-              method="post"
-              novalidate
-            >
-            <input type="hidden" name="access_key" value="5484399a-efe5-44c3-907e-136d488c202b" />
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  autocomplete="name"
-                  placeholder="Enter your name"
-                  required
-                />
-                <span
-                  class="form-error"
-                  id="nameError"
-                  aria-live="polite"
-                ></span>
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  autocomplete="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <span
-                  class="form-error"
-                  id="emailError"
-                  aria-live="polite"
-                ></span>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="What would you like to discuss?"
-                  required
-                />
-                <span
-                  class="form-error"
-                  id="subjectError"
-                  aria-live="polite"
-                ></span>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  placeholder="Tell me about your idea..."
-                  required
-                ></textarea>
-                <span
-                  class="form-error"
-                  id="messageError"
-                  aria-live="polite"
-                ></span>
-              </div>
-              <button class="primary-button form-submit-button" type="submit">
-                <span>Send Message</span>
-                <span class="button-arrow" aria-hidden="true">↗</span>
-              </button>
-              <div
-                class="form-success"
-                id="formSuccess"
-                role="status"
-                aria-live="polite"
-              >
-                Your message is ready to send.
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      <section class="final-cta-section section" aria-labelledby="cta-title">
-        <div class="container">
-          <div class="final-cta">
-            <div class="cta-decoration cta-decoration-one"></div>
-            <div class="cta-decoration cta-decoration-two"></div>
-            <div class="cta-content">
-              <span class="cta-label">LET'S CREATE SOMETHING GREAT</span>
-              <h2 id="cta-title">
-                Your next big idea
-                <span class="gradient-text">starts here.</span>
-              </h2>
-              <a class="primary-button" href="#contact">
-                <span>Start a Conversation</span>
-                <span class="button-arrow" aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="container footer-container">
-        <div class="footer-brand">
-          <a class="site-logo" href="#home" aria-label="Go to homepage">
-            <span class="logo-icon"></span>
-            <span class="logo-text">Bin Abdinoor</span>
-          </a>
-          <p>
-            Building digital experiences with purpose, creativity and
-            technology.
-          </p>
-        </div>
-        <div class="footer-navigation">
-          <span class="footer-heading">NAVIGATE</span>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-social">
-          <span class="footer-heading">CONNECT</span>
-          <a href="#social">LinkedIn</a>
-          <a href="#social">GitHub</a>
-          <a href="#social">Instagram</a>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <h2>Eight years of running a business taught me how to ship.</h2>
+        <div class="prose">
+          <p>For over eight years, I've kept a business running behind the scenes — sales, operations, inventory, problem-solving under pressure. That discipline is exactly what I bring to development: show up, figure it out, ship it.</p>
+          <p>I'm trilingual, self-driven, and building in public. Every line of code I write is proof that where you start doesn't decide where you end up.</p>
+          <p>I know what a shop owner needs from a screen at 6 pm on a busy day, and what a school office needs on the first morning of term. That is how I decide what to build, and what to leave out.</p>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <p>
-          © <span id="currentYear">2026</span> Bin Abdinoor. All rights
-          reserved.
-        </p>
-        <p>Designed & built with intention.</p>
+    </section>
+
+    <!-- WORK -->
+    <section class="section tint" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>Two things I'm building, and the site you're on. Open any of them for the details.</p>
+        </div>
+
+        <article class="project">
+          <div class="project-art art-green" aria-hidden="true"><div class="win"><div class="win-bar"><i></i><i></i><i></i></div><div class="win-body"><div class="m-side"><b></b><b></b><b></b><b></b></div><div class="m-main"><div class="m-title">Lengolink</div><div class="m-cards"><u></u><u></u><u></u></div><div class="m-rows"><s></s><s></s><s></s></div></div></div></div></div>
+          <div class="project-body">
+            <p class="project-type">School management platform · Live</p>
+            <h3>Lengolink</h3>
+            <p>A school management system I'm building as my own venture. Parent and teacher portals, fee and attendance tracking, and a security-hardened backend, built in deliberate phases and running live today.</p>
+            <ul class="tags"><li>Node.js</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li><li>React</li><li>Vite</li></ul>
+            <button class="link-btn" data-project="lengolink" type="button">View details <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="project flip">
+          <div class="project-art art-clay" aria-hidden="true"><div class="win"><div class="win-bar"><i></i><i></i><i></i></div><div class="win-body"><div class="c-wrap"><div class="c-modes"><b>Standard</b><b>Scientific</b><b>Programmer</b></div><div class="c-screen">12,480.50</div><div class="c-keys"><u></u><u></u><u></u><u class="op"></u><u></u><u></u><u></u><u class="op"></u><u></u><u></u><u></u><u class="op"></u></div></div></div></div></div>
+          <div class="project-body">
+            <p class="project-type">Mobile-ready app · In progress</p>
+            <h3>Professional Calculator</h3>
+            <p>One calculator with many modes: standard, scientific, programmer, converter, percentage, financial, statistics, date and equation solving. Written in vanilla JavaScript with Vite, and planned for the Play Store.</p>
+            <ul class="tags"><li>JavaScript</li><li>Vite</li><li>CSS</li></ul>
+            <button class="link-btn" data-project="calculator" type="button">View details <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-art art-sand" aria-hidden="true"><div class="win"><div class="win-bar"><i></i><i></i><i></i></div><div class="win-body"><div class="p-wrap"><div class="p-face"></div><div class="p-lines"><s></s><s class="w"></s><s class="n"></s></div></div></div></div></div>
+          <div class="project-body">
+            <p class="project-type">Website · Live</p>
+            <h3>This portfolio</h3>
+            <p>Hand-written HTML, CSS and JavaScript, with a working contact form, light and dark themes, and a layout that holds up from a phone to a wide monitor. It's also where I practice what I learn.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <button class="link-btn" data-project="portfolio" type="button">View details <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
       </div>
-    </footer>
-    <div
-      class="project-modal"
-      id="projectModal"
-      aria-hidden="true"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalProjectTitle"
-    >
-      <div class="modal-backdrop" data-modal-close></div>
-      <div class="project-modal-content">
-        <button
-          class="modal-close-button"
-          type="button"
-          id="modalCloseButton"
-          aria-label="Close project details"
-        >
-          ×
-        </button>
-        <div class="modal-project-number">
-          PROJECT <span id="modalProjectNumber">01</span>
+    </section>
+
+    <!-- PATH -->
+    <section class="section" id="path">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How I got here</h2>
         </div>
-        <h2 id="modalProjectTitle">Digital Experience Platform</h2>
-        <p id="modalProjectDescription">
-          A modern web experience focused on clean interaction, responsive
-          layouts and intuitive navigation.
-        </p>
-        <div class="modal-project-details">
-          <div class="modal-detail">
-            <span>CATEGORY</span
-            ><strong id="modalProjectCategory">Web Development</strong>
+        <ol class="path">
+          <li>
+            <p class="when">Now</p>
+            <div>
+              <h3>Teaching myself web development</h3>
+              <p>Building real projects in HTML, CSS and JavaScript, then Node and React, and publishing what I make.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Ongoing</p>
+            <div>
+              <h3>Freelance data entry &amp; virtual assistant — Upwork</h3>
+              <p>Remote client work across languages, with a focus on accuracy and reliable communication.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">8+ years</p>
+            <div>
+              <h3>Sales, cashier &amp; inventory — Alnoor Enterprises</h3>
+              <p>Day-to-day operations, customers and stock for a wholesale and distribution business. Where I learned to be dependable.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section tint" id="skills">
+      <div class="wrap skills-grid">
+        <h2>What I work with</h2>
+        <div class="skill-groups">
+          <div>
+            <h3>Front end</h3>
+            <p>HTML5, CSS3, JavaScript, responsive design, React, UI and UX thinking</p>
           </div>
-          <div class="modal-detail">
-            <span>TECHNOLOGIES</span
-            ><strong id="modalProjectTechnology">HTML, CSS, JavaScript</strong>
+          <div>
+            <h3>Back end</h3>
+            <p>Node.js, Express, Prisma, PostgreSQL, REST APIs</p>
           </div>
-          <div class="modal-detail">
-            <span>FOCUS</span
-            ><strong id="modalProjectFocus">User Experience</strong>
+          <div>
+            <h3>Tools</h3>
+            <p>Git and GitHub, Vite, deployment on Render and GitHub Pages</p>
           </div>
-        </div>
-        <div class="modal-project-actions">
-          <a class="primary-button" href="#contact" id="modalContactButton">
-            <span>Discuss a Similar Project</span>
-            <span class="button-arrow" aria-hidden="true">↗</span>
-          </a>
+          <div>
+            <h3>Languages</h3>
+            <p>Somali (native), Swahili (fluent), English (fluent)</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <h2>Let's talk about what you need built.</h2>
+          <p>Tell me a little about your project or idea. I read every message myself and reply as soon as I can.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:binabdinoor@gmail.com">binabdinoor@gmail.com</a></li>
+            <li><span>Based in</span>Watamu / Kilifi, Kenya</li>
+            <li><span>GitHub</span><a href="https://github.com/Abuu-Yahya" target="_blank" rel="noopener">github.com/Abuu-Yahya</a></li>
+            <li><span>Upwork</span><a href="https://www.upwork.com/freelancers/~01b55e15e6db06e7d1?viewMode=1" target="_blank" rel="noopener">My Upwork profile</a></li>
+            <li><span>TikTok</span><a href="https://www.tiktok.com/@maogtahay" target="_blank" rel="noopener">@maogtahay</a></li>
+            <li><span>Facebook</span><a href="https://www.facebook.com/sidallybinabdinoor" target="_blank" rel="noopener">Sidally Bin Abdinoor</a></li>
+          </ul>
+        </div>
+
+        <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+          <!-- Paste your Web3Forms access key below, replacing the placeholder -->
+          <input type="hidden" name="access_key" value="5484399a-efe5-44c3-907e-136d488c202b" />
+          <input type="hidden" name="subject" value="New message from your portfolio" />
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <span class="err" id="nameError" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+            <span class="err" id="emailError" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="message">How can I help?</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="err" id="messageError" role="alert"></span>
+          </div>
+          <button class="btn btn-primary" type="submit" id="submitBtn">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>© <span id="year">2026</span> Ali Abdinoor Muhammed. Built by hand in Watamu.</p>
+      <a href="#top">Back to top ↑</a>
     </div>
-    <div
-      class="copy-notification"
-      id="copyNotification"
-      role="status"
-      aria-live="polite"
-    >
-      <span class="notification-icon">✓</span>
-      <span id="copyNotificationText">Copied successfully.</span>
-    </div>
-    <button
-      class="back-to-top"
-      id="backToTop"
-      type="button"
-      aria-label="Back to top"
-      title="Back to top"
-    >
-      ↑
-    </button>
-    <script src="js/script.js"></script>
-  </body>
+  </footer>
+
+  <!-- Project dialog -->
+  <dialog class="dialog" id="projectDialog" aria-labelledby="dlgTitle">
+    <button class="icon-btn dlg-close" id="dlgClose" aria-label="Close" type="button">✕</button>
+    <p class="project-type" id="dlgType"></p>
+    <h3 id="dlgTitle"></h3>
+    <p id="dlgText"></p>
+    <dl>
+      <div><dt>Built with</dt><dd id="dlgTech"></dd></div>
+      <div><dt>Focus</dt><dd id="dlgFocus"></dd></div>
+    </dl>
+  </dialog>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
