@@ -309,3 +309,18 @@ p { margin: 0 0 1em; }
 .project:hover .v-tracks .a { width: 88%; } .project:hover .v-tracks .b { width: 62%; } .project:hover .v-tracks .c { width: 74%; }
 .project:hover .u-row s.mid::after { width: 100%; } .project:hover .u-row s.low::after { width: 60%; }
 :root[data-theme="dark"] .art-ink .win { color: #E8E1D2; }
+
+/* CoastTrack preview */
+.art-sea { background: #1F4E5A; }
+.g-map { position: relative; flex: 1; min-height: 150px; border-radius: 8px; overflow: hidden; color: #2B231D;
+  background: linear-gradient(#E8F0EE,#E8F0EE) padding-box;
+  background-image: linear-gradient(rgba(47,93,78,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(47,93,78,.12) 1px, transparent 1px);
+  background-size: 28px 28px; background-color: #EAF1EC; }
+.g-route { position: absolute; left: 12%; top: 66%; width: 52%; height: 38%; border-top: 3px dashed #2F5D4E; border-right: 3px dashed #2F5D4E; border-radius: 0 28px 0 0; transition: width .5s ease; }
+.g-pin { position: absolute; left: 62%; top: 30%; width: 16px; height: 16px; border-radius: 50% 50% 50% 0; background: #C0392B; transform: rotate(-45deg); transition: transform .45s ease, left .5s ease, top .5s ease; z-index: 2; }
+.g-pin::after { content: ""; position: absolute; inset: 4px; border-radius: 50%; background: #fff; }
+.g-pulse { position: absolute; left: calc(62% - 7px); top: calc(30% + 8px); width: 30px; height: 30px; border-radius: 50%; background: rgba(192,57,43,.2); transition: transform .5s ease; }
+.g-chip { position: absolute; left: 10px; bottom: 10px; background: #fff; border-radius: 99px; padding: 3px 10px; font-size: .72rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.project:hover .g-pin { transform: rotate(-45deg) translate(-8px, 8px) scale(1.15); }
+.project:hover .g-pulse { transform: scale(1.5); }
+.project:hover .g-route { width: 56%; }

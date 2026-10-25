@@ -63,6 +63,13 @@
       tech: "Node.js, Express, Prisma, PostgreSQL, React, Vite",
       focus: "Reliability, security and clear screens for busy school staff"
     },
+    coasttrack: {
+      type: "Mobile app · In progress",
+      title: "CoastTrack GPS",
+      text: "A mobile GPS tracking app that I'm building. The goal is a simple, clear way to see location on a phone, designed around people who need to know where something is.",
+      tech: "Mobile app, GPS, Maps",
+      focus: "Clear location display and an easy experience on a phone"
+    },
     studio: {
       type: "AI video preparation · In progress",
       title: "JARVIS Content Studio",
