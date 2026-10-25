@@ -63,6 +63,20 @@
       tech: "Node.js, Express, Prisma, PostgreSQL, React, Vite",
       focus: "Reliability, security and clear screens for busy school staff"
     },
+    studio: {
+      type: "AI video preparation · In progress",
+      title: "JARVIS Content Studio",
+      text: "An AI assistant that helps prepare videos for our YouTube channel. It supports the steps between an idea and a finished video, such as scripting, voice-over and assembly, so less of the work is done by hand.",
+      tech: "AI, Automation, Video",
+      focus: "Turning ideas into publish-ready videos with less manual editing"
+    },
+    uploader: {
+      type: "YouTube upload automation · In progress",
+      title: "JARVIS Auto-Uploader",
+      text: "The publishing half of the same system. It takes finished videos and uploads them to our YouTube channel with their titles and descriptions, so posting doesn't depend on doing it manually.",
+      tech: "YouTube, Automation, AI",
+      focus: "Consistent, hands-off publishing to our channel"
+    },
     calculator: {
       type: "Mobile-ready app · In progress",
       title: "Professional Calculator",
