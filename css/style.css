@@ -411,3 +411,15 @@ p { margin: 0 0 1em; }
   .foot-bottom .made { text-align: center; }
   .to-top { justify-self: center; }
 }
+
+/* Copyright bar v3 */
+.site-footer .foot-bottom { grid-template-columns: 1fr auto auto; gap: 12px 28px; font-size: .86rem; letter-spacing: .01em; }
+.foot-bottom .made { color: #8FA196; text-align: right; }
+.foot-bottom .made::before { display: none; }
+.to-top { width: 38px; height: 38px; padding: 0; justify-content: center; border: 1px solid rgba(255,255,255,.22); color: #E8C77A; }
+.to-top svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.to-top:hover { background: rgba(232,199,122,.14); border-color: #E8C77A; }
+@media (max-width: 760px) {
+  .site-footer .foot-bottom { grid-template-columns: 1fr; }
+  .foot-bottom .made { text-align: center; }
+}
