@@ -31,6 +31,7 @@
   menuBtn.addEventListener("click", () => {
     const open = nav.classList.toggle("open");
     menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
   $$("a", nav).forEach(a => a.addEventListener("click", closeMenu));
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
@@ -46,6 +47,8 @@
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     links.forEach(l => { const s = $(l.getAttribute("href")); if (s) spy.observe(s); });
+    const topSpy = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) links.forEach(l => l.classList.remove("active")); }), { rootMargin: "-45% 0px -50% 0px" });
+    const topEl = $("#top"); if (topEl) topSpy.observe(topEl);
 
     /* Reveal */
     const rv = new IntersectionObserver((entries, o) => {
