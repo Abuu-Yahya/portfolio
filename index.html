@@ -207,52 +207,81 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section" id="contact">
+    <section class="section contact" id="contact">
       <div class="wrap contact-grid">
         <div class="contact-intro">
+          <p class="avail"><span class="dot" aria-hidden="true"></span>Available for new projects</p>
           <h2>Let's talk about what you need built.</h2>
-          <p>Tell me a little about your project or idea. I read every message myself and reply as soon as I can.</p>
+          <p class="contact-lead">Whether it's a website for your business, a web app, or a system for your school, tell me what you have in mind. I read every message myself and usually reply within a day.</p>
           <ul class="contact-list">
-            <li><span>Email</span><a href="mailto:binabdinoor@gmail.com">binabdinoor@gmail.com</a></li>
-            <li><span>Based in</span>Watamu / Kilifi, Kenya</li>
-            <li><span>GitHub</span><a href="https://github.com/Abuu-Yahya" target="_blank" rel="noopener">github.com/Abuu-Yahya</a></li>
-            <li><span>Upwork</span><a href="https://www.upwork.com/freelancers/~01b55e15e6db06e7d1?viewMode=1" target="_blank" rel="noopener">My Upwork profile</a></li>
-            <li><span>TikTok</span><a href="https://www.tiktok.com/@maogtahay" target="_blank" rel="noopener">@maogtahay</a></li>
-            <li><span>Facebook</span><a href="https://www.facebook.com/sidallybinabdinoor" target="_blank" rel="noopener">Sidally Bin Abdinoor</a></li>
+            <li><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>Email</small><a href="mailto:binabdinoor@gmail.com">binabdinoor@gmail.com</a></div></li>
+            <li><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Based in</small><span class="cv">Watamu / Kilifi, Kenya</span></div></li>
+            <li><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5m12 4.5v-3.2a2.8 2.8 0 0 0-.8-2.2c2.700-.3 5.500-1.300 5.500-6a4.600 4.600 0 0 0-1.300-3.200 4.300 4.300 0 0 0-.1-3.200s-1-.3-3.400 1.300a11.700 11.700 0 0 0-6.200 0C6.300 2.800 5.300 3.100 5.300 3.100a4.300 4.300 0 0 0-.1 3.200A4.600 4.600 0 0 0 3.900 9.500c0 4.600 2.800 5.600 5.500 6a2.800 2.800 0 0 0-.8 2.200V21"/></svg></span><div><small>GitHub</small><a href="https://github.com/Abuu-Yahya" target="_blank" rel="noopener">github.com/Abuu-Yahya</a></div></li>
+            <li><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><div><small>Upwork</small><a href="https://www.upwork.com/freelancers/~01b55e15e6db06e7d1?viewMode=1" target="_blank" rel="noopener">View my profile</a></div></li>
+            <li><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.500 3.500 0 1 1-3.500-3.500M14 3c.3 2.400 2 4 4.500 4.200"/></svg></span><div><small>TikTok</small><a href="https://www.tiktok.com/@maogtahay" target="_blank" rel="noopener">@maogtahay</a></div></li>
+            <li><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.500A3.500 3.500 0 0 0 9 6.500V9H6.500v3.500H9V21h3.500v-8.500H15L15.500 9h-3V6.800c0-.5.300-.8.800-.8H15z"/></svg></span><div><small>Facebook</small><a href="https://www.facebook.com/sidallybinabdinoor" target="_blank" rel="noopener">Sidally Bin Abdinoor</a></div></li>
           </ul>
         </div>
 
         <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="post" novalidate>
-          <!-- Paste your Web3Forms access key below, replacing the placeholder -->
+          <h3 class="form-title">Send me a message</h3>
+          <p class="form-sub">Fill in the form and it goes straight to my inbox.</p>
           <input type="hidden" name="access_key" value="5484399a-efe5-44c3-907e-136d488c202b" />
           <input type="hidden" name="subject" value="New message from your portfolio" />
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
 
-          <div class="field">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-            <span class="err" id="nameError" role="alert"></span>
+          <div class="row2">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+              <span class="err" id="nameError" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+              <span class="err" id="emailError" role="alert"></span>
+            </div>
           </div>
           <div class="field">
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-            <span class="err" id="emailError" role="alert"></span>
+            <label for="topic">What do you need?</label>
+            <select id="topic" name="topic">
+              <option value="Business website">A website for my business</option>
+              <option value="Web application">A web application</option>
+              <option value="School system">A school management system</option>
+              <option value="Other">Something else</option>
+            </select>
           </div>
           <div class="field">
-            <label for="message">How can I help?</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Tell me about it</label>
+            <textarea id="message" name="message" rows="5" placeholder="A few lines about your project, your goals and your timeline" required></textarea>
             <span class="err" id="messageError" role="alert"></span>
           </div>
-          <button class="btn btn-primary" type="submit" id="submitBtn">Send message</button>
+          <button class="btn btn-primary btn-block" type="submit" id="submitBtn">Send message</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-note">Your details are used only to reply to you.</p>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap foot">
-      <p>© <span id="year">2026</span> Ali Abdinoor Muhammed. Built by hand in Watamu.</p>
+    <div class="wrap foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><img src="images/profile.jpg" alt="" width="36" height="36" /><span>Bin</span></a>
+        <p>Web developer building software for businesses and schools, from Watamu, Kenya.</p>
+      </div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#about">About</a><a href="#work">Work</a><a href="#path">Path</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-links">
+        <a href="https://github.com/Abuu-Yahya" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.upwork.com/freelancers/~01b55e15e6db06e7d1?viewMode=1" target="_blank" rel="noopener">Upwork</a>
+        <a href="mailto:binabdinoor@gmail.com">Email</a>
+        <a href="assets/documents/resume.pdf" download>Résumé</a>
+      </div>
+    </div>
+    <div class="wrap foot-bottom">
+      <p>© <span id="year">2026</span> Ali Abdinoor Muhammed. All rights reserved.</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
