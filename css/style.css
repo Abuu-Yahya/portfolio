@@ -618,3 +618,27 @@ p { margin: 0 0 1em; }
 .project-art.has-shot .win img { display: block; width: 100%; height: auto; }
 .dlg-shot { display: block; width: 100%; height: auto; margin: 4px 0 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--tint); }
 .dlg-shot[hidden] { display: none; }
+
+/* logo mark in header/footer */
+.brand img.brand-mark { border-radius: 10px; object-fit: contain; }
+/* services */
+.svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.svc-grid .skill-card p { margin: 0; color: var(--muted); font-size: .97rem; line-height: 1.6; }
+.svc-cta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin: 32px 0 0; }
+.svc-cta span { color: var(--muted); font-size: .95rem; }
+@media (max-width: 1000px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .svc-grid { grid-template-columns: 1fr; } .svc-cta { flex-direction: column; align-items: flex-start; gap: 12px; } }
+
+/* header: collapse to the menu button earlier so nothing wraps */
+.nav a, .nav .nav-resume, .nav .nav-cta { white-space: nowrap; }
+@media (max-width: 1120px) {
+  .menu-btn { display: flex; }
+  .bar { height: 66px; }
+  .nav { position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; align-items: stretch; background: var(--bg); border-bottom: 1px solid var(--line); padding: 8px 16px 20px; box-shadow: 0 20px 30px -20px rgba(0,0,0,.35); display: none; }
+  .nav.open { display: flex; }
+  .nav a { padding: 14px 6px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .nav a::after { display: none !important; }
+  .nav .nav-resume { margin: 12px 0 0; justify-content: center; border-radius: 10px; }
+  .nav .nav-cta { margin: 10px 0 0; text-align: center; border-bottom: 0; border-radius: 10px; }
+}
+.svc-cta .btn span { color: inherit; opacity: 1; }
