@@ -63,6 +63,7 @@
       type: "School management platform · Live",
       title: "Lengolink",
       text: "A school management system I'm building as my own venture for schools in Kenya. It covers parent and teacher portals, attendance and fee tracking, and has been built phase by phase with security hardening along the way. It runs live on Render.",
+      shot: "images/lengolink-dashboard.webp", shotAlt: "Lengolink admin dashboard",
       tech: "Node.js, Express, Prisma, PostgreSQL, React, Vite",
       focus: "Reliability, security and clear screens for busy school staff"
     },
@@ -91,6 +92,7 @@
       type: "Mobile-ready app · In progress",
       title: "Professional Calculator",
       text: "A multi-mode calculator: standard, scientific, programmer, converter, percentage, financial, statistics, date and equation solving. Built with vanilla JavaScript and Vite, with a Play Store release planned.",
+      shot: "images/calculator-screens.webp", shotAlt: "Professional Calculator, standard mode and menu",
       tech: "JavaScript, Vite, CSS",
       focus: "Accuracy, speed and a clean interface across many modes"
     },
@@ -108,6 +110,8 @@
     if (!p) return;
     $("#dlgType").textContent = p.type;
     $("#dlgTitle").textContent = p.title;
+    const shot = $("#dlgShot");
+    if (p.shot) { shot.src = p.shot; shot.alt = p.shotAlt || ""; shot.hidden = false; } else { shot.hidden = true; shot.removeAttribute("src"); }
     $("#dlgText").textContent = p.text;
     const techBox = $("#dlgTech");
     techBox.textContent = "";

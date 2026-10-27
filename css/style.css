@@ -611,3 +611,10 @@ p { margin: 0 0 1em; }
 /* header v6: lighter Download CV */
 .nav .nav-resume { background: color-mix(in srgb, var(--ink) 68%, var(--bg)); border-color: color-mix(in srgb, var(--ink) 68%, var(--bg)); color: var(--bg); }
 .nav .nav-resume:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* real screenshots in project cards and dialog */
+.project-art.has-shot { aspect-ratio: auto; padding: clamp(14px, 3vw, 26px); }
+.project-art.has-shot .win { background: #fff; }
+.project-art.has-shot .win img { display: block; width: 100%; height: auto; }
+.dlg-shot { display: block; width: 100%; height: auto; margin: 4px 0 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--tint); }
+.dlg-shot[hidden] { display: none; }
