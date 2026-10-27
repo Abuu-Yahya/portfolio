@@ -647,3 +647,7 @@ p { margin: 0 0 1em; }
 .hero-local { display: flex; align-items: flex-start; gap: 10px; margin: 18px 0 0; max-width: 52ch; color: var(--muted); font-size: .98rem; line-height: 1.5; }
 .hero-local svg { flex: none; width: 18px; height: 18px; margin-top: 3px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .hero-local a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* hero order: intro, tech tags, buttons, local line */
+.hero .lead { margin-bottom: 22px; }
+.hero-tech { margin: 0 0 28px; }
