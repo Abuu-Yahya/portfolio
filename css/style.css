@@ -566,3 +566,21 @@ p { margin: 0 0 1em; }
   .path-intro { position: static; }
   .skill-cards { grid-template-columns: 1fr; }
 }
+
+/* Portrait size fix: let aspect-ratio control the height */
+.portrait-frame img { height: auto; aspect-ratio: 4 / 5; }
+@media (max-width: 860px) {
+  .portrait { max-width: 210px; margin-top: 4px; }
+  .portrait figcaption { font-size: .82rem; margin-top: 10px; }
+  .float-card { padding: 8px 12px; border-radius: 12px; }
+  .float-card strong { font-size: .85rem; }
+  .float-card small { font-size: .7rem; }
+  .fc-1 { left: -22px; bottom: 44px; }
+  .fc-2 { right: -22px; top: 14px; }
+}
+@media (max-width: 420px) { .fc-1 { display: flex; } }
+@media (max-width: 860px) {
+  .hero-actions { flex-wrap: nowrap; gap: 10px; }
+  .hero-actions .btn-lg { flex: 1; padding: 14px 10px; font-size: .95rem; white-space: nowrap; }
+}
+@media (max-width: 400px) { .hero .kicker .k-loc { display: none; } }
