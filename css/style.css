@@ -589,7 +589,3 @@ p { margin: 0 0 1em; }
 .brand-text strong { white-space: nowrap; }
 @media (max-width: 480px) { .brand-text strong { font-size: .98rem; } }
 @media (max-width: 380px) { .brand-text strong { font-size: .9rem; } }
-
-/* hero without portrait (temporary) */
-.hero-grid { grid-template-columns: 1fr; }
-.hero-copy { max-width: 780px; }
