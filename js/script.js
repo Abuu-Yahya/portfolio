@@ -3,6 +3,23 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
 
+
+  /* Colour dot for each technology chip */
+  const dots = {
+    "html":"#E34F26","html5":"#E34F26","css":"#2965F1","css3":"#2965F1","javascript":"#E3B000","react":"#1FA8CF","node.js":"#5FA04E",
+    "postgresql":"#336791","express":"#6B7280","prisma":"#5A67D8","vite":"#8B5CF6","git":"#F05032","github":"#6E7681","github pages":"#6E7681",
+    "vs code":"#2F80ED","render":"#2BB88B","youtube":"#E02D2D","web3forms":"#E4572E","rest apis":"#0E9F8E","role-based access":"#0E9F8E",
+    "responsive design":"#C9A24B","english (fluent)":"#2F5D4E","somali (native)":"#4A90D9","swahili (native)":"#2BB88B",
+    "ai":"#8B5CF6","ai assistant":"#8B5CF6","voice control":"#E4572E","dashboard":"#2F80ED","automation":"#0E9F8E","voice":"#E4572E"
+  };
+  function paintChips(root) {
+    $$(".tags li, .hero-tech li, .chip", root).forEach(el => {
+      const c = dots[el.textContent.trim().toLowerCase()];
+      if (c) el.style.setProperty("--dot", c);
+    });
+  }
+  paintChips(document);
+
   /* Year */
   $("#year").textContent = new Date().getFullYear();
 
@@ -124,6 +141,7 @@
     const techBox = $("#dlgTech");
     techBox.textContent = "";
     p.tech.split(",").forEach(t => { const s = document.createElement("span"); s.className = "chip"; s.textContent = t.trim(); techBox.appendChild(s); });
+    paintChips(techBox);
     $("#dlgFocus").textContent = p.focus;
     if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
   }));
