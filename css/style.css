@@ -533,3 +533,36 @@ p { margin: 0 0 1em; }
   .to-top { justify-self: end; width: 34px; height: 34px; }
 }
 @media (max-width: 480px) { .site-footer .foot-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Path timeline and skill cards */
+.path-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(28px, 6vw, 80px); align-items: start; }
+.path-intro p, .skills-intro p { color: var(--muted); margin: 16px 0 24px; max-width: 42ch; }
+.path-intro h2::before { content: ""; display: block; width: 44px; height: 4px; border-radius: 3px; background: var(--gold); margin-bottom: 16px; }
+.path-intro { position: sticky; top: 100px; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 30px; position: relative; display: grid; gap: 18px; }
+.timeline::before { content: ""; position: absolute; left: 7px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(var(--accent), var(--line)); }
+.tl-item { position: relative; }
+.tl-dot { position: absolute; left: -30px; top: 24px; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--gold); }
+.tl-now .tl-dot { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 20%, transparent); }
+.tl-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+.tl-card:hover { transform: translateY(-3px); box-shadow: 0 20px 36px -24px rgba(43,35,29,.5); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.tl-now .tl-card { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.tl-when { display: inline-block; margin: 0 0 10px; padding: 3px 12px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); font-weight: 700; font-size: .82rem; }
+.tl-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.tl-card p:not(.tl-when) { color: var(--muted); margin: 0; }
+.tl-card .tags { margin: 14px 0 0; }
+.skills-grid { grid-template-columns: .85fr 1.15fr; align-items: start; }
+.skills-intro h2::before { content: ""; display: block; width: 44px; height: 4px; border-radius: 3px; background: var(--gold); margin-bottom: 16px; }
+.skill-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.skill-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+.skill-card:hover { transform: translateY(-4px); box-shadow: 0 20px 36px -24px rgba(43,35,29,.5); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.sk-ico { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; background: color-mix(in srgb, var(--accent) 14%, transparent); margin-bottom: 14px; }
+.sk-ico svg { width: 22px; height: 22px; fill: none; stroke: var(--accent); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.skill-card h3 { font-size: 1.15rem; margin-bottom: 12px; }
+.skill-card .tags { margin: 0; gap: 6px; }
+.skill-card .tags li { background: var(--bg); }
+@media (max-width: 860px) {
+  .path-grid, .skills-grid { grid-template-columns: 1fr; }
+  .path-intro { position: static; }
+  .skill-cards { grid-template-columns: 1fr; }
+}
