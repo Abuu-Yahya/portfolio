@@ -153,6 +153,7 @@
       const data = await res.json();
       if (data.success) {
         status.className = "form-status ok";
+        if (typeof gtag === "function") gtag("event", "generate_lead", { method: "contact_form" });
         status.textContent = "Thank you — your message is on its way. I'll reply soon.";
         form.reset();
       } else { throw new Error(data.message || "Failed"); }
