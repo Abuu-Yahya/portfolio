@@ -89,7 +89,7 @@
       focus: "Consistent, hands-off publishing to our channel"
     },
     assistant: {
-      type: "Personal AI assistant · In progress",
+      type: "Personal AI assistant · In use",
       title: "JARVIS Assistant",
       text: "My personal assistant, built to work by voice. It listens for a wake word, shows a live news desk with a markets ticker, and helps me create videos, write code when I need it, and handle everyday tasks.",
       shot: "images/jarvis-assistant.webp", shotAlt: "JARVIS assistant idle and listening screens",
