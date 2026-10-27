@@ -512,3 +512,24 @@ p { margin: 0 0 1em; }
 .btn { gap: 8px; }
 .portrait { max-width: 380px; }
 @media (max-width: 860px) { .portrait { max-width: 270px; order: 0; margin-top: 8px; } .hero { padding-top: 28px; } }
+
+/* Footer compact (mobile) */
+@media (max-width: 860px) {
+  .site-footer { padding: 32px 0 16px; }
+  .site-footer .foot-grid { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .site-footer .foot-brand { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; }
+  .site-footer .foot-brand .brand { margin: 0; grid-column: 1 / -1; font-size: 1.02rem; }
+  .site-footer .brand img { width: 34px; height: 34px; }
+  .site-footer .foot-brand p { grid-column: 1 / -1; margin: 10px 0 14px; font-size: .88rem; line-height: 1.5; }
+  .foot-social { grid-column: 1 / -1; gap: 8px; }
+  .foot-social a { width: 36px; height: 36px; }
+  .foot-social svg { width: 16px; height: 16px; }
+  .foot-col { gap: 7px; }
+  .foot-col h4 { font-size: .98rem; margin-bottom: 2px; }
+  .foot-col a { font-size: .88rem; }
+  .foot-loc { font-size: .84rem; }
+  .site-footer .foot-bottom { grid-template-columns: 1fr auto; gap: 8px 12px; margin-top: 24px; padding-top: 14px; text-align: left; justify-items: start; font-size: .78rem; }
+  .foot-bottom .made { display: none; }
+  .to-top { justify-self: end; width: 34px; height: 34px; }
+}
+@media (max-width: 480px) { .site-footer .foot-grid { grid-template-columns: 1fr 1fr; } }
