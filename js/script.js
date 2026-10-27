@@ -89,12 +89,12 @@
       focus: "Consistent, hands-off publishing to our channel"
     },
     assistant: {
-      type: "Personal AI assistant · In use",
+      type: "Personal AI assistant · In active use",
       title: "JARVIS Assistant",
-      text: "My personal assistant, built to work by voice. It listens for a wake word, shows a live news desk with a markets ticker, and helps me create videos, write code when I need it, and handle everyday tasks.",
+      text: "A voice-driven personal assistant that I use in my own work. It responds to a wake word, presents a live news desk with a markets ticker, and helps me create videos, write code when needed and manage routine tasks.",
       shot: "images/jarvis-assistant.webp", shotAlt: "JARVIS assistant idle and listening screens",
-      tech: "Voice interface, AI assistant, Dashboard",
-      focus: "Hands-free help that saves me time on content and code"
+      tech: "Voice control, AI assistant, Dashboard",
+      focus: "Hands-free support that saves time on content creation and coding"
     },
     calculator: {
       type: "Mobile-ready app · In progress",
