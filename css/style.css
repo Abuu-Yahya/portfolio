@@ -589,3 +589,10 @@ p { margin: 0 0 1em; }
 .brand-text strong { white-space: nowrap; }
 @media (max-width: 480px) { .brand-text strong { font-size: .98rem; } }
 @media (max-width: 380px) { .brand-text strong { font-size: .9rem; } }
+
+/* header v4: Download CV button */
+.nav .nav-resume { display: inline-flex; align-items: center; gap: 8px; margin-left: 8px; padding: 9px 16px; border: 1.5px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--accent) 9%, transparent); color: var(--accent); font-weight: 600; transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease; }
+.nav .nav-resume .dl-ico { transition: transform .25s ease; }
+.nav .nav-resume:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-1px); }
+.nav .nav-resume:hover .dl-ico { transform: translateY(2px); }
+@media (max-width: 860px) { .nav .nav-resume { justify-content: center; margin: 12px 0 0; border-radius: 10px; } }
