@@ -19,6 +19,11 @@
     });
   }
   paintChips(document);
+  /* Mark the current standalone page in the main navigation. */
+  const currentPage = location.pathname.split("/").pop() || "index.html";
+  $$(".nav a").filter(a => !a.classList.contains("nav-cta")).forEach(a => {
+    if (a.getAttribute("href") === currentPage) a.setAttribute("aria-current", "page");
+  });
 
   /* Year */
   $("#year").textContent = new Date().getFullYear();
@@ -71,7 +76,11 @@
     const rv = new IntersectionObserver((entries, o) => {
       entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); o.unobserve(en.target); } });
     }, { threshold: 0.12 });
-    $$(".project, .path li, .skill-groups > div, .prose p").forEach(el => { el.classList.add("reveal"); rv.observe(el); });
+    $$("#work .section-head, .project, .path li, .skill-card, .prose p, .contact-grid > *").forEach((el, index) => {
+      el.classList.add("reveal");
+      el.style.setProperty("--reveal-order", index % 6);
+      rv.observe(el);
+    });
   }
 
   /* Project dialog */
@@ -150,6 +159,7 @@
 
   /* Contact form */
   const form = $("#contactForm"), status = $("#formStatus"), submitBtn = $("#submitBtn");
+  if (!form) return;
   const emailOk = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
   function check() {
     let ok = true;
