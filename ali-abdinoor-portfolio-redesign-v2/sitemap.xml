@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://binabdinoor.com/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://binabdinoor.com/privacy.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://binabdinoor.com/terms.html</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url><loc>https://binabdinoor.com/projects/lengolink.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://binabdinoor.com/projects/coasttrack-gps.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://binabdinoor.com/projects/jarvis-content-studio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://binabdinoor.com/projects/jarvis-auto-uploader.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://binabdinoor.com/projects/jarvis-assistant.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://binabdinoor.com/projects/professional-calculator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://binabdinoor.com/projects/portfolio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://binabdinoor.com/about.html</loc></url><url><loc>https://binabdinoor.com/skills.html</loc></url><url><loc>https://binabdinoor.com/services.html</loc></url><url><loc>https://binabdinoor.com/work.html</loc></url><url><loc>https://binabdinoor.com/experience.html</loc></url><url><loc>https://binabdinoor.com/contact.html</loc></url></urlset>

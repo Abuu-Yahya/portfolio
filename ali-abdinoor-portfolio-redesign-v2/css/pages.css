@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+.name-backdrop{position:fixed;inset:35% 0 auto;z-index:0;overflow:hidden;pointer-events:none;opacity:.065;color:var(--ink,#102b3a);font:400 clamp(110px,25vw,400px)/1.35 Allura,"Brush Script MT",cursive;letter-spacing:-.025em;white-space:nowrap;transform:rotate(-5deg);padding-inline:4vw}
+.name-backdrop span{display:block;width:max-content;max-width:100%;animation:nameWrite 12s ease-in-out infinite;clip-path:inset(0 100% 0 0)}
+main,footer{position:relative;z-index:1}
+.independent-page main{min-height:85svh;padding-top:92px;animation:pageEnter .85s cubic-bezier(.2,.7,.2,1) both}
+.independent-page .hero{min-height:calc(100svh - 92px);padding-top:36px;background:transparent}
+.independent-page .section{background:transparent}
+.independent-page #work{background:transparent}
+.independent-page .section-head,.independent-page h2{animation:headingEnter 1s cubic-bezier(.2,.7,.2,1) both}
+.independent-page .nav a{transition:color .2s,transform .25s}
+.independent-page .nav a:hover{transform:translateY(-3px)}
+:is(.page-contact,.scrolling-home) .contact{background:var(--gold)}
+@keyframes nameWrite{0%,8%{clip-path:inset(0 100% 0 0);opacity:1}60%,88%{clip-path:inset(0 0 0 0);opacity:1}100%{clip-path:inset(0 0 0 0);opacity:0}}
+@keyframes pageEnter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes headingEnter{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateY(25px)}to{opacity:1;clip-path:inset(0);transform:none}}
+@media(max-width:600px){.independent-page main{padding-top:78px}}
+@media(prefers-reduced-motion:reduce){.name-backdrop span,.independent-page main,.independent-page h2,.independent-page .section-head{animation:none!important}.name-backdrop span{clip-path:none}}
+
+/* Projects index: quiet, consistently proportioned cards. */
+.project-number{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;margin-bottom:16px;border:1px solid var(--line);border-radius:50%;color:var(--accent);font-size:.72rem;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.03em}
+html:has(.scrolling-home){scroll-padding-top:82px}
+.scrolling-home main{animation:none;transform:none}
+.scrolling-home main>section{position:relative;clear:both;scroll-margin-top:0}
+.scrolling-home .section-head,.scrolling-home h2{animation:none}
+.scrolling-home .reveal{opacity:1;transform:none;clip-path:none;transition-delay:0s}
+.scrolling-home main>.section{padding-block:80px}
+.scrolling-home .about-grid{row-gap:28px}
+.scrolling-home .about-grid .prose{padding-top:0}
+.scrolling-home #work{padding-top:36px;padding-bottom:80px}
+@media(max-width:600px){html:has(.scrolling-home){scroll-padding-top:76px}.scrolling-home main>.section{padding-block:56px}}
+:is(.page-work,.scrolling-home) #work .section-head{background:var(--bg);color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+:is(.page-work,.scrolling-home) #work .section-head h2{color:var(--ink)}
+:is(.page-work,.scrolling-home) #work .section-head p{color:var(--muted)}
+:is(.page-work,.scrolling-home) #work .section-label{color:var(--muted)}
+:is(.page-work,.scrolling-home) #work .section-label span{color:var(--gold);border-color:var(--gold)}
+.scrolling-home .section{padding-block:clamp(70px,8vw,110px)}
+.scrolling-home .section-head h2,.scrolling-home .about-grid h2,.scrolling-home .skills-intro h2{font-size:clamp(2.8rem,5vw,5rem);line-height:1;letter-spacing:-.06em}
+.scrolling-home .svc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.scrolling-home .svc-grid .skill-card{min-height:0;display:block}
+.scrolling-home .svc-grid .skill-card h3{margin:24px 0 16px}
+.scrolling-home .delivery-process{display:none}
+.scrolling-home .skills-grid{grid-template-columns:.8fr 1.2fr}
+.scrolling-home .skill-card .sk-ico{display:none}
+.scrolling-home .skill-proof{margin-top:16px}
+.scrolling-home .contact{background:var(--bg);color:var(--ink)}
+.scrolling-home .contact h2,.scrolling-home .contact h3,.scrolling-home .contact-list a,.scrolling-home .contact .cv{color:var(--ink)}
+.scrolling-home .contact-lead{color:var(--muted)!important}
+.scrolling-home .contact .form{background:var(--card);border-color:var(--line)}
+.scrolling-home .form label,.scrolling-home .form-sub,.scrolling-home .form-note{color:var(--muted)}
+.scrolling-home .form input,.scrolling-home .form textarea,.scrolling-home .form select{background:var(--bg);border-color:var(--line);color:var(--ink)}
+@media(max-width:850px){.scrolling-home .svc-grid,.scrolling-home .skills-grid,.scrolling-home .contact-grid{grid-template-columns:1fr}}
+:is(.page-contact,.scrolling-home) .name-backdrop span{animation:none;clip-path:none;opacity:.6}
+@media(max-width:600px){.name-backdrop{font-size:21vw;inset:45% 0 auto;letter-spacing:-.04em}}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:first-child a{white-space:normal;overflow-wrap:anywhere}
+:is(.page-contact,.scrolling-home) .contact .contact-details .primary-contact li:first-child{position:relative;display:block;padding-top:0}
+:is(.page-contact,.scrolling-home) .contact .contact-details .primary-contact li:first-child .ci{position:absolute;left:0;top:31px;width:20px;height:24px}
+:is(.page-contact,.scrolling-home) .contact .contact-details .primary-contact li:first-child .ci svg{width:20px;height:20px}
+:is(.page-contact,.scrolling-home) .contact .contact-details .primary-contact li:first-child small{margin:0 0 10px;line-height:20px}
+:is(.page-contact,.scrolling-home) .contact .contact-details .primary-contact li:first-child a{display:inline-block;margin-left:30px;line-height:28px;border-bottom-color:color-mix(in srgb,var(--ink) 35%,transparent)}
+:is(.page-contact,.scrolling-home) .contact-details{margin-top:32px}
+:is(.page-contact,.scrolling-home) .contact .contact-details .contact-list{margin:0;display:block}
+:is(.page-contact,.scrolling-home) .contact .contact-details .primary-contact li:first-child{border-bottom:0;padding-bottom:0}
+:is(.page-contact,.scrolling-home) .contact-details .whatsapp-contact{margin:20px 0 28px 40px;padding:11px 16px;font-size:.9rem;gap:10px;border-radius:6px}
+:is(.page-contact,.scrolling-home) .contact-details .whatsapp-contact svg{width:24px;height:24px}
+:is(.page-contact,.scrolling-home) .contact .contact-details .location-contact li:first-child{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.social-profiles{margin-top:26px}
+.social-profiles p{margin:0 0 12px;color:var(--muted);font-size:.75rem}
+.social-profiles>div{display:flex;flex-wrap:wrap;gap:12px 28px}
+.social-profiles a{display:inline-flex;align-items:center;gap:10px;padding:8px 0;color:var(--ink);font-size:.9rem;text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.social-profiles a:hover{color:var(--accent);border-bottom-color:currentColor}
+.social-profiles a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+@media(max-width:400px){:is(.page-contact,.scrolling-home) .contact-details .whatsapp-contact{margin-left:0}}
+:is(.page-contact,.scrolling-home) .contact .contact-list .contact-icon{width:28px;height:28px;flex:0 0 28px}
+:is(.page-contact,.scrolling-home) .contact .contact-list .contact-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+:is(.page-contact,.scrolling-home) .contact .contact-list .icon-upwork{color:#108a00}
+:is(.page-contact,.scrolling-home) .contact .contact-list .icon-facebook{color:#1877f2}
+:is(.page-contact,.scrolling-home) .contact .contact-list .icon-tiktok{color:var(--ink)}
+:is(.page-contact,.scrolling-home) .contact .contact-list .contact-icon svg{stroke:currentColor}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(n+3) a{display:inline-block;min-height:32px;padding-block:4px;transition:color .2s ease;text-decoration:none}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(n+3) a:hover{text-decoration:underline;text-underline-offset:5px;color:var(--accent)}
+.whatsapp-contact{display:flex;align-items:center;gap:14px;width:fit-content;max-width:100%;margin-top:28px;padding:15px 20px;border:1px solid var(--line);border-radius:8px;color:var(--ink);text-decoration:none;transition:border-color .2s,background .2s}
+.whatsapp-contact>svg{flex:none;color:var(--accent)}
+.whatsapp-contact small{display:block;color:var(--muted);font-size:.75rem;margin-top:3px}
+.whatsapp-contact>span:last-child{margin-left:20px}
+.whatsapp-contact:hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,transparent)}
+:is(.page-contact,.scrolling-home) .contact .contact-lead{color:var(--muted)!important;line-height:1.75}
+:is(.page-contact,.scrolling-home) .contact .contact-list{display:flex;flex-wrap:wrap;gap:0 24px;margin:32px 0 0;padding:0;min-width:0}
+:is(.page-contact,.scrolling-home) .contact .contact-list li{display:flex;align-items:center;gap:12px;margin:0;padding:16px 0;border:0;border-radius:0;background:transparent;transform:none;overflow-wrap:normal;min-width:0}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:hover{background:transparent;transform:none;border-color:var(--line)}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(-n+2){flex:0 0 100%;border-bottom:1px solid var(--line)}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:first-child{padding-top:0;padding-bottom:22px}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(n+3){flex:0 1 auto;padding-top:24px;gap:8px}
+:is(.page-contact,.scrolling-home) .contact .contact-list .ci{width:24px;height:28px;border:0;border-radius:0;background:transparent;color:var(--ink)}
+:is(.page-contact,.scrolling-home) .contact .contact-list .ci svg{stroke:var(--ink);width:19px;height:19px}
+:is(.page-contact,.scrolling-home) .contact .contact-list li>div{min-width:0;max-width:100%}
+:is(.page-contact,.scrolling-home) .contact .contact-list small{font-size:.72rem;line-height:1.5;margin-bottom:5px;color:var(--muted)}
+:is(.page-contact,.scrolling-home) .contact .contact-list a,:is(.page-contact,.scrolling-home) .contact .contact-list .cv{overflow-wrap:normal;word-break:normal;color:var(--ink);font-size:.92rem;line-height:1.5}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:first-child a{font-size:clamp(1rem,2.1vw,1.5rem);white-space:nowrap;letter-spacing:-.035em;text-decoration:none;border-bottom:1px solid currentColor}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(3)::before{content:"Find me online";position:absolute;top:0;left:0;color:var(--muted);font-size:.72rem}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(3){position:relative;margin-top:24px;padding-top:24px}
+:is(.page-contact,.scrolling-home) .contact .contact-list li:nth-child(n+4){margin-top:24px}
+@media(max-width:400px){:is(.page-contact,.scrolling-home) .contact .contact-list{column-gap:18px}:is(.page-contact,.scrolling-home) .contact .contact-list li:first-child{gap:8px}:is(.page-contact,.scrolling-home) .contact .contact-list li:first-child a{font-size:1rem}}
+.independent-page .site-header{background:var(--bg);padding:0;border-bottom:1px solid var(--line);backdrop-filter:none}
+.independent-page .site-header .bar,.independent-page .site-header.scrolled .bar{min-height:70px;height:70px;align-items:center;background:transparent;box-shadow:none;border:0;padding:0}
+.independent-page .brand-text{gap:4px;line-height:1.1}
+.independent-page .brand-text strong{font-size:.95rem}
+.independent-page .brand-text small{font-size:.62rem;letter-spacing:.11em;color:var(--muted)}
+.independent-page .nav{align-items:center;gap:3px}
+.independent-page .nav a{font-size:.81rem;font-weight:500;padding:10px 10px}
+.independent-page .nav .nav-cta{font-size:.78rem;padding:10px 17px;margin-left:12px;border-color:var(--line)}
+.independent-page .theme-btn{width:38px;height:38px;min-width:38px;margin-left:2px;border-color:var(--line)}
+.independent-page .nav a[aria-current="page"]{color:var(--ink)}
+.independent-page .nav a[aria-current="page"]::after{display:block!important;transform:scaleX(1);height:2px;background:#f04e35;bottom:3px;left:10px;right:10px}
+.independent-page main{padding-top:70px}
+:is(.page-skills,.scrolling-home) .section.tint,:root[data-theme="dark"] :is(.page-skills,.scrolling-home) .section.tint{background:transparent}
+@media(max-width:820px){.independent-page .site-header .bar{height:64px;min-height:64px}.independent-page main{padding-top:64px}.independent-page .nav{top:64px;align-items:stretch;gap:0}.independent-page .nav a{padding:14px 10px}.independent-page .nav .nav-cta{margin:12px 0 0;padding:13px}.independent-page .nav a[aria-current="page"]::after{right:auto;width:24px}.independent-page .menu-btn{width:40px;height:40px}}
+:is(.page-services,.scrolling-home) .section-head h2,:is(.page-skills,.scrolling-home) .skills-intro h2{font-size:clamp(3rem,6vw,5.5rem);line-height:1;letter-spacing:-.06em}
+:is(.page-services,.scrolling-home) .svc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:38px}
+:is(.page-services,.scrolling-home) .svc-grid .skill-card{min-height:0;padding:28px 0;display:block}
+:is(.page-services,.scrolling-home) .svc-grid .skill-card h3{margin:28px 0 18px;font-size:1.65rem;line-height:1.15}
+.service-deliverables{padding-left:18px;margin:24px 0;font-size:.92rem;color:var(--muted)}
+.service-deliverables li{margin-bottom:10px}
+:is(.page-services,.scrolling-home) .skill-card a,.skill-proof{font-size:.85rem;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px;display:inline-block}
+.language-note{padding:24px 0;border-block:1px solid var(--line);margin:32px 0 70px;color:var(--muted)}
+.delivery-process h3{font-size:clamp(1.8rem,3vw,3rem);line-height:1.1;letter-spacing:-.04em}
+.delivery-process ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;list-style:none;padding:0;margin:36px 0 48px}
+.delivery-process li{border-top:1px solid var(--line);padding-top:20px}
+.delivery-process strong{font-size:.9rem;color:var(--accent)}
+.delivery-process p{font-size:.92rem;color:var(--muted);margin-top:12px}
+:is(.page-skills,.scrolling-home) .skills-grid{grid-template-columns:.8fr 1.2fr;align-items:start}
+:is(.page-skills,.scrolling-home) .skill-cards{display:block}
+:is(.page-skills,.scrolling-home) .skill-card{padding:28px 0 36px}
+:is(.page-skills,.scrolling-home) .sk-ico{display:none}
+:is(.page-skills,.scrolling-home) .skill-card h3{font-size:1.65rem;margin:0 0 14px}
+:is(.page-skills,.scrolling-home) .skill-card p{color:var(--muted);max-width:48ch;margin-bottom:24px}
+:is(.page-skills,.scrolling-home) .skill-card .tags{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-bottom:22px}
+:is(.page-skills,.scrolling-home) .skill-card .tags li{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:12px 0;background:transparent;box-shadow:none;font-weight:500}
+:is(.page-skills,.scrolling-home) .skill-card .tags li:hover{transform:none;background:transparent}
+:is(.page-skills,.scrolling-home) .skill-card:last-child .tags{display:flex;gap:20px;flex-wrap:wrap}
+:is(.page-contact,.scrolling-home) .contact{background:var(--bg);color:var(--ink)}
+:is(.page-contact,.scrolling-home) .contact h2{font-size:clamp(3rem,5.7vw,5.5rem);line-height:1;letter-spacing:-.06em;color:var(--ink)}
+:is(.page-contact,.scrolling-home) .contact h3,:is(.page-contact,.scrolling-home) .contact .eyebrow,:is(.page-contact,.scrolling-home) .contact-list a,:is(.page-contact,.scrolling-home) .contact .cv{color:var(--ink)}
+:is(.page-contact,.scrolling-home) .contact-lead,:is(.page-contact,.scrolling-home) .contact-list small{color:var(--muted)}
+:is(.page-contact,.scrolling-home) .form{border:1px solid var(--line);background:var(--card);animation:none!important;transform:none!important;clip-path:none!important;opacity:1!important}
+:is(.page-contact,.scrolling-home) .form input,:is(.page-contact,.scrolling-home) .form select,:is(.page-contact,.scrolling-home) .form textarea{color:var(--ink);border-color:var(--line);background:var(--bg);padding:13px 14px}
+:is(.page-contact,.scrolling-home) .form label,:is(.page-contact,.scrolling-home) .form-sub,:is(.page-contact,.scrolling-home) .form-note{color:var(--muted)}
+:is(.page-contact,.scrolling-home) .form input::placeholder,:is(.page-contact,.scrolling-home) .form textarea::placeholder{color:var(--muted)}
+:is(.page-contact,.scrolling-home) .contact-list li:first-child a{font-size:clamp(1rem,2vw,1.45rem);text-decoration:underline}
+:is(.page-contact,.scrolling-home) .contact-list li:nth-child(n+3){font-size:.88rem}
+:is(.page-contact,.scrolling-home) .form-status.ok{color:var(--accent)}
+:is(.page-contact,.scrolling-home) .form-status.bad,:is(.page-contact,.scrolling-home) .err{color:#b62d20}
+@media(max-width:850px){:is(.page-services,.scrolling-home) .svc-grid{grid-template-columns:1fr}.delivery-process ol{grid-template-columns:1fr 1fr}:is(.page-skills,.scrolling-home) .skills-grid{grid-template-columns:1fr}:is(.page-contact,.scrolling-home) .contact-grid{grid-template-columns:1fr}}
+@media(max-width:450px){.delivery-process ol{grid-template-columns:1fr}:is(.page-skills,.scrolling-home) .skill-card .tags{grid-template-columns:1fr}}
+:is(.page-work,.scrolling-home) #work { padding-bottom:80px; }
+:is(.page-work,.scrolling-home) #work .wrap { width:min(1240px,calc(100% - 64px)); margin-inline:auto; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px 32px; background:transparent; }
+:is(.page-work,.scrolling-home) #work .section-head { grid-column:1/-1; min-height:260px; padding:44px 36px; margin-bottom:4px; justify-content:center; }
+:is(.page-work,.scrolling-home) #work .section-head::before { display:none; }
+:is(.page-work,.scrolling-home) #work .section-label { margin-bottom:22px; }
+:is(.page-work,.scrolling-home) #work .section-head h2 { font-size:clamp(3.5rem,7vw,6rem); line-height:.95; letter-spacing:-.065em; }
+:is(.page-work,.scrolling-home) #work .section-head p { margin:24px 0 0; max-width:50ch; font-size:1rem; }
+:is(.page-work,.scrolling-home) #work .project:nth-of-type(n) { grid-column:auto; display:flex; flex-direction:column; min-height:0; background:transparent; color:var(--ink); border-bottom:1px solid var(--line); }
+:is(.page-work,.scrolling-home) #work .project:nth-of-type(n) .project-art { width:100%; height:auto; aspect-ratio:16/10; padding:24px; display:grid; place-items:center; }
+:is(.page-work,.scrolling-home) #work .project-art .win { width:100%; height:100%; max-height:100%; }
+:is(.page-work,.scrolling-home) #work .project-art .win img { width:100%; height:100%; object-fit:contain; }
+:is(.page-work,.scrolling-home) #work .project-body { padding:26px 0 30px; display:flex; gap:0; min-height:0; }
+:is(.page-work,.scrolling-home) #work .project-body::after { display:none; }
+:is(.page-work,.scrolling-home) #work .project-type { margin:0 0 14px; padding:0; font-size:.68rem; letter-spacing:.12em; color:var(--muted); }
+:is(.page-work,.scrolling-home) #work .project-body h3 { max-width:none; margin:0 0 14px; font-size:clamp(1.7rem,2.6vw,2.5rem); line-height:1.12; letter-spacing:-.045em; }
+:is(.page-work,.scrolling-home) #work .project-body p:not(.project-type) { margin:0; font-size:.96rem; line-height:1.7; color:var(--muted); max-width:48ch; }
+:is(.page-work,.scrolling-home) #work .project-body .tags { display:none; }
+:is(.page-work,.scrolling-home) #work .project-body .link-btn { margin-top:22px; border:0; padding:0; border-radius:0; box-shadow:none; background:transparent; color:var(--ink); text-decoration:none; font-size:.88rem; }
+:is(.page-work,.scrolling-home) #work .link-btn span { display:inline; }
+:is(.page-work,.scrolling-home) #work .project:hover { background:transparent; color:var(--ink); }
+:is(.page-work,.scrolling-home) #work .project:hover .project-body p { color:var(--muted); }
+:is(.page-work,.scrolling-home) #work .project:hover .link-btn { color:var(--accent); }
+:is(.page-work,.scrolling-home) #work .project:hover .project-art .win { transform:scale(1.025); filter:none; }
+@media(max-width:700px){:is(.page-work,.scrolling-home) #work .wrap{width:calc(100% - 30px);grid-template-columns:1fr;gap:36px}:is(.page-work,.scrolling-home) #work .section-head{min-height:230px;padding:32px 20px}:is(.page-work,.scrolling-home) #work .project:nth-of-type(n){grid-column:1/-1}:is(.page-work,.scrolling-home) #work .project-body{padding-top:22px}}
+
+/* Spacious project introductions with consistent reading order. */
+:is(.page-work,.scrolling-home) #work .wrap{grid-template-columns:minmax(0,1fr);row-gap:0}
+:is(.page-work,.scrolling-home) #work .section-head{margin-bottom:20px}
+:is(.page-work,.scrolling-home) #work .project:nth-of-type(n){grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(36px,6vw,80px);align-items:center;padding:64px 0;margin:0;min-height:0}
+:is(.page-work,.scrolling-home) #work .project:nth-of-type(n) .project-art{order:0;aspect-ratio:16/11;height:auto;min-width:0}
+:is(.page-work,.scrolling-home) #work .project-body{order:1;padding:0;min-width:0;align-items:flex-start}
+:is(.page-work,.scrolling-home) #work .visual-caption{font-size:.68rem!important;line-height:1.5!important;margin:0 0 20px!important;color:var(--muted)}
+:is(.page-work,.scrolling-home) #work .project-number{margin-bottom:12px}
+:is(.page-work,.scrolling-home) #work .project-body h3{margin-bottom:22px;font-size:clamp(1.9rem,3vw,3rem)}
+:is(.page-work,.scrolling-home) #work .project-body .project-role{margin-top:22px!important;font-size:.85rem!important;line-height:1.7!important}
+.project-role strong{display:block;color:var(--ink);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px}
+.project-method{margin-top:42px}
+.project-method>div{padding:24px 0;border-top:1px solid var(--line)}
+.project-method h3{font:700 1.1rem Manrope,sans-serif;margin:0 0 12px}
+.project-method p{margin:0}
+.preview-caption{font-size:.75rem;color:var(--muted);margin:48px 0 14px}
+.preview-caption+.project-visual{margin-top:0}
+@media(max-width:760px){:is(.page-work,.scrolling-home) #work .project:nth-of-type(n){grid-template-columns:1fr;gap:28px;padding:44px 0}:is(.page-work,.scrolling-home) #work .project-body h3{font-size:2rem}}
+
+/* Contact form: proportional controls and container-aware field layout. */
+:is(.page-contact,.scrolling-home) .contact .form{container-type:inline-size;padding:clamp(22px,3vw,36px);border:1px solid var(--line);border-radius:12px;box-shadow:none}
+:is(.page-contact,.scrolling-home) .form .form-title{font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.2;letter-spacing:-.04em;margin:0 0 12px}
+:is(.page-contact,.scrolling-home) .form .form-sub{font-size:.95rem;line-height:1.65;margin:0 0 28px;max-width:42ch}
+:is(.page-contact,.scrolling-home) .form .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+:is(.page-contact,.scrolling-home) .form .field{min-width:0;margin-bottom:22px}
+:is(.page-contact,.scrolling-home) .form label{display:block;font-size:.82rem;line-height:1.5;font-weight:600;margin-bottom:8px;color:var(--ink)}
+:is(.page-contact,.scrolling-home) .form input:not([type=hidden]):not([type=checkbox]),:is(.page-contact,.scrolling-home) .form select,:is(.page-contact,.scrolling-home) .form textarea{display:block;width:100%;min-width:0;max-width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font:400 1rem/1.5 var(--sans);color:var(--ink);background:var(--bg);box-shadow:none}
+:is(.page-contact,.scrolling-home) .form input:not([type=hidden]):not([type=checkbox]),:is(.page-contact,.scrolling-home) .form select{min-height:48px;height:48px}
+:is(.page-contact,.scrolling-home) .form textarea{min-height:150px;resize:vertical}
+:is(.page-contact,.scrolling-home) .form input:focus,:is(.page-contact,.scrolling-home) .form select:focus,:is(.page-contact,.scrolling-home) .form textarea:focus{outline:2px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
+:is(.page-contact,.scrolling-home) .form .btn-block{min-height:48px;padding:12px 20px;font-size:.95rem;line-height:1.5;border-radius:6px;margin-top:2px}
+:is(.page-contact,.scrolling-home) .form .form-note{font-size:.76rem;line-height:1.65;text-align:left;margin-top:16px;overflow-wrap:anywhere}
+:is(.page-contact,.scrolling-home) .form .form-note a{font-weight:500}
+:is(.page-contact,.scrolling-home) .form .form-status:empty{display:none}
+@container(max-width:460px){:is(.page-contact,.scrolling-home) .form .row2{grid-template-columns:1fr;gap:0}}
+@media(max-width:600px){:is(.page-contact,.scrolling-home) .form .row2{grid-template-columns:1fr;gap:0}}
